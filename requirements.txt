@@ -1,0 +1,5 @@
+numpy>=1.21
+# searching an index on a GPU
+torch>=2.0
+# only needed to encode new pockets from structure
+esm>=3.0

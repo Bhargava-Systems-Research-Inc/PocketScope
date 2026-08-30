@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pocketscope"
+version = "1.0.0"
+description = "Proteome-scale binding-site retrieval with frozen protein language models"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Keshav Mohan"}, {name = "Yash Bhargava", email = "yash@bhargavaresearch.org"}]
+dependencies = ["numpy>=1.21"]
+
+[project.optional-dependencies]
+gpu = ["torch>=2.0"]
+encode = ["torch>=2.0", "esm>=3.0"]
+
+[project.scripts]
+pocketscope = "pocketscope.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Bhargava-Systems-Research-Inc/PocketScope"
